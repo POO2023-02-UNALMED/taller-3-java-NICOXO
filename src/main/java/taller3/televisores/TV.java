@@ -2,13 +2,13 @@ package taller3.televisores;
 
 
 public class TV {
-    private static int numTV = 0;
     private Marca marca;
     private int canal;
     private int precio;
     private boolean estado;
     private int volumen;
     private Control control;
+    private static int numTV = 0;
 
     public TV(Marca marca, boolean estado) {
         this.marca = marca;
@@ -19,6 +19,36 @@ public class TV {
         numTV++;
     }
 
+    public Marca getMarca() {
+        return marca;
+    }
+
+    public void setMarca(Marca marca) {
+        this.marca = marca;
+    }
+
+    public int getCanal() {
+        return canal;
+    }
+
+    public void setCanal(int canal) {
+        if (estado && canal >= 1 && canal <= 120) {
+            this.canal = canal;
+        }
+    }
+
+    public int getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(int precio) {
+        this.precio = precio;
+    }
+
+    public boolean getEstado() {
+        return estado;
+    }
+
     public void turnOn() {
         estado = true;
     }
@@ -27,8 +57,14 @@ public class TV {
         estado = false;
     }
 
-    public boolean getEstado() {
-        return estado;
+    public int getVolumen() {
+        return volumen;
+    }
+
+    public void setVolumen(int volumen) {
+        if (estado && volumen >= 0 && volumen <= 7) {
+            this.volumen = volumen;
+        }
     }
 
     public void canalUp() {
@@ -53,40 +89,6 @@ public class TV {
         if (estado && volumen > 0) {
             volumen--;
         }
-    }
-    public int getCanal() {
-        return canal;
-    }
-    public void setCanal(int canal) {
-        if (estado && canal >= 1 && canal <= 120) {
-            this.canal = canal;
-        }
-    }
-
-    public void setVolumen(int volumen) {
-        if (estado && volumen >= 0 && volumen <= 7) {
-            this.volumen = volumen;
-        }
-    }
-
-    public Marca getMarca() {
-        return marca;
-    }
-
-    public void setMarca(Marca marca) {
-        this.marca = marca;
-    }
-
-    public int getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(int precio) {
-        this.precio = precio;
-    }
-
-    public int getVolumen() {
-        return volumen;
     }
 
     public Control getControl() {
