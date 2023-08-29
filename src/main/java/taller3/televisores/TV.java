@@ -54,7 +54,9 @@ public class TV {
             volumen--;
         }
     }
-
+    public int getCanal() {
+        return canal;
+    }
     public void setCanal(int canal) {
         if (estado && canal >= 1 && canal <= 120) {
             this.canal = canal;
