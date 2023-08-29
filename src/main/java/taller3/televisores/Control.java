@@ -43,7 +43,11 @@ public class Control {
             tv.volumenDown();
         }
     }
-
+    public void setCanal(int canal) {
+        if (tv != null) {
+            tv.setCanal(canal);
+        }
+    }
     public TV getTv() {
         return tv;
     }
