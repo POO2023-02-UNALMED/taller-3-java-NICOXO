@@ -8,14 +8,6 @@ public class Control {
         tv.setControl(this);
     }
 
-    public TV getTv() {
-        return tv;
-    }
-
-    public void setTv(TV tv) {
-        this.tv = tv;
-    }
-
     public void turnOn() {
         if (tv != null) {
             tv.turnOn();
@@ -62,5 +54,13 @@ public class Control {
         if (tv != null) {
             tv.setVolumen(volumen);
         }
+    }
+
+    public TV getTv() {
+        return tv;
+    }
+
+    public void setTv(TV tv) {
+        this.tv = tv;
     }
 }
