@@ -44,18 +44,6 @@ public class Control {
         }
     }
 
-    public void setCanal(int canal) {
-        if (tv != null) {
-            tv.setCanal(canal);
-        }
-    }
-
-    public void setVolumen(int volumen) {
-        if (tv != null) {
-            tv.setVolumen(volumen);
-        }
-    }
-
     public TV getTv() {
         return tv;
     }
